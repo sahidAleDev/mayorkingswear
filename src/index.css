@@ -37,10 +37,16 @@ body {
 */
 
 .nav-container {
+    position: absolute;
+    width: 100%;
+    padding: 1rem 2rem;
     top: 1rem;
-    padding: 1rem 0.5rem;
     display: flex;
     justify-content: space-between;
+}
+
+.logo-container {
+    font-weight: 900;
 }
 
 .links-container a {
@@ -129,43 +135,10 @@ body {
     right: 10rem;
 }
 
-@media only screen and (max-width: 1240px) {
-    .container-image-1 {
-        z-index: 1;
-    }
-
-    .container-image-2 {
-        z-index: 2;
-        top: 10%;
-        right: 0rem;
-    }
+.container-image-2  img {
+    width: 100%;
 }
 
-@media only screen and (max-width: 990px) {
-    .hero {
-        position: static;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        clip-path: none;
-    }
-
-    .content {
-        text-align: center;
-        position: static;
-    }
-
-    .container-image-1 {
-        display: none;
-    }
-
-    .container-image-2 {
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        top: 25%;
-    }
-}
 
 /*
     * ***** ACERCA DE
@@ -173,10 +146,11 @@ body {
 
 .about-us {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: #191919;
-    padding: 5rem;
+    padding: 3rem;
 }
 
 .about-us .left-part {
@@ -210,4 +184,128 @@ body {
 
 .text-about {
     text-align: justify;
+}
+
+/*
+    * ***** Gallery
+*/
+
+.gallery-full {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-full .title-gallery {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    width: 75%;
+    height: 430px;
+}
+
+.gallery img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5 ease;
+}
+
+.gallery img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+@media screen and (max-width: 1300px) {
+    .container-image-1 {
+        z-index: 1;
+    }
+
+    .container-image-2 {
+        z-index: 2;
+        top: 10%;
+        right: 0rem;
+    }
+
+    .about-us .left-part,
+    .about-us .right-part {
+        width: 50%;
+    }
+
+    .title-about {
+        font-size: 40px;
+    }
+    
+    .litle-title-about {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .hero {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: none;
+    }
+
+    .content {
+        text-align: center;
+        position: static;
+    }
+
+    .container-image-1 {
+        display: none;
+    }
+
+    .container-image-2 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 25%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .container-image-2 {
+        width: 350px;
+    }
+    .about-us .left-part,
+    .about-us .right-part {
+        width: 100%;
+    }
+
+    .about-us .right-part {
+        padding: 1rem 0;
+    }
+
+    .title-about {
+        font-size: 40px;
+    }
+    
+    .litle-title-about {
+        font-size: 20px;
+    }
+
+    .text-about {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .gallery img:hover {
+        width: 150px;
+    }
 }
