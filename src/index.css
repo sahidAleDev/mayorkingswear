@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #191919;
+    color: #fdfdfd;
+}
+
+:root {
+    --shadow-color: 32deg 23% 27%;
+    --shadow-elevation-low:
+      -0.3px 0px 0.3px hsl(var(--shadow-color) / 0.34),
+      -0.5px 0px 0.6px -1.2px hsl(var(--shadow-color) / 0.34),
+      -1.1px -0.1px 1.2px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium:
+      -0.3px 0px 0.3px hsl(var(--shadow-color) / 0.36),
+      -0.9px -0.1px 1px -0.8px hsl(var(--shadow-color) / 0.36),
+      -2.3px -0.2px 2.6px -1.7px hsl(var(--shadow-color) / 0.36),
+      -5.6px -0.4px 6.3px -2.5px hsl(var(--shadow-color) / 0.36);
+    --shadow-elevation-high:
+      -0.3px 0px 0.3px hsl(var(--shadow-color) / 0.34),
+      -1.6px -0.1px 1.8px -0.4px hsl(var(--shadow-color) / 0.34),
+      -3px -0.2px 3.4px -0.7px hsl(var(--shadow-color) / 0.34),
+      -5px -0.3px 5.6px -1.1px hsl(var(--shadow-color) / 0.34),
+      -7.9px -0.5px 8.9px -1.4px hsl(var(--shadow-color) / 0.34),
+      -12.4px -0.8px 14px -1.8px hsl(var(--shadow-color) / 0.34),
+      -18.9px -1.3px 21.3px -2.1px hsl(var(--shadow-color) / 0.34),
+      -27.8px -1.9px 31.3px -2.5px hsl(var(--shadow-color) / 0.34);
+  }
+
+/*
+    * ***** Nav Container
+*/
+
+.nav-container {
+    top: 1rem;
+    padding: 1rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-container a {
+    color: #fdfdfd;
+    margin: 0 0.3rem;
+    text-decoration: none;
+}
+
+/*
+    * ***** HERO
+*/
+
+.hero { 
+    position: relative;
+    background: linear-gradient(to right,rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(./images/imgHero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 100% 67%, 24% 90%, 21% 90%, 19% 89%, 0% 70%, 0% 35%, 0 19%);
+    background-color: #191919;
+}
+
+.content {
+    z-index: 3;
+    position: absolute;
+    top: 15rem;
+    left: 7rem;
+}
+
+.content .subtopic {
+    color: gray;
+    font-size: 1.5rem;
+
+}
+
+.content .topic {
+    color: #fdfdfd;
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.content .topic span {
+    font-weight: bold;
+    color: #91785D;
+}
+
+
+.bts-container {
+    margin-top: 2rem;
+}
+
+.bts-container .style-btn-1 {
+    border: none;
+    border-radius: 10px;
+    padding: 0.3rem 2rem;
+    margin-right: 2rem;
+}
+
+.bts-container .style-btn-2 {
+    border: none;
+    background-color: transparent;
+    color: #fdfdfd;
+    border: 1px solid #fdfdfd;
+    border-radius: 10px;
+    padding: 0.3rem 2rem;
+    margin-right: 2rem;
+}
+
+.bts-container .style-btn-2:hover {
+    background-color: #91785D;
+    border: none;
+}
+
+.container-image-1 {
+    position: absolute;
+    width: 385px;
+    top: 10%;
+    right: 0rem;
+}
+
+.container-image-2 {
+    position: absolute;
+    width: 477px;
+    top: 30%;
+    right: 10rem;
+}
+
+@media only screen and (max-width: 1240px) {
+    .container-image-1 {
+        z-index: 1;
+    }
+
+    .container-image-2 {
+        z-index: 2;
+        top: 10%;
+        right: 0rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .hero {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: none;
+    }
+
+    .content {
+        text-align: center;
+        position: static;
+    }
+
+    .container-image-1 {
+        display: none;
+    }
+
+    .container-image-2 {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 25%;
+    }
+}
+
+/*
+    * ***** ACERCA DE
+*/
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    padding: 5rem;
+}
+
+.about-us .left-part {
+    width: 25%;
+}
+
+
+.about-us .left-part img {
+    width: 100%;
+}
+
+.about-us .right-part {
+    width: 50%;
+    padding: 1rem 3rem;
+}
+
+.title-about {
+    font-size: 80px;
+    margin-bottom: 1rem;
+}
+
+.litle-title-about {
+    font-size: 40px;
+    color: gainsboro;
+    margin-bottom: 1rem;
+}
+
+.litle-title-about span {
+    color: #91785D;
+}
+
+.text-about {
+    text-align: justify;
+}
