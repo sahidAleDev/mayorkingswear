@@ -4,10 +4,21 @@
     box-sizing: border-box;
 }
 
-body {
+.body-home {
     font-family: 'Roboto', sans-serif;
     background-color: #191919;
     color: #fdfdfd;
+}
+
+.body-productos {
+    font-family: 'Roboto', sans-serif;
+    background-color: #191919;
+    color: #fdfdfd;
+    padding: 1rem;
+}
+
+.body-productos h1 {
+    text-align: center;
 }
 
 :root {
@@ -192,7 +203,7 @@ body {
 
 .gallery-full {
     text-align: center;
-    margin-bottom: 2rem;
+    padding: 2rem;
 }
 
 .gallery-full .title-gallery {
@@ -225,6 +236,74 @@ body {
     opacity: 1;
     filter: contrast(120%);
 }
+
+/*
+    * ***** CARD
+*/
+
+.container-product {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 476px;
+    width: 20%;
+    border-radius: 15px;
+}
+
+.product-card .top-card {
+    background-color: #91785D;
+    height: 55%;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.product-card .shirt_image {
+    position: absolute;
+    top: -4.5rem;
+    left: 50%;
+    width: 300px;
+    height: auto;
+    transform: translateX(-50%);
+}
+
+.product-card .bottom-card{
+    background-color: white;
+    height: 45%;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+}
+
+.bottom-card .product_name {
+    color: #191919;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1.2rem;
+}
+
+.bottom-card .product_description {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.bottom-card .product_description p {
+    text-align: center;
+    font-size: 14px;
+    color: #191919;
+    max-width: 75%;
+}
+/*
+    * ***** MEDIA QUERIES HOME
+*/
 
 @media screen and (max-width: 1300px) {
     .container-image-1 {
@@ -307,5 +386,27 @@ body {
 @media screen and (max-width: 550px) {
     .gallery img:hover {
         width: 150px;
+    }
+}
+
+/*
+    * ***** MEDIA QUERIES PRODUCTS
+*/
+
+@media screen and (max-width: 1263px) {
+    .product-card {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .product-card {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 536px) {
+    .product-card {
+        width: 80%;
     }
 }

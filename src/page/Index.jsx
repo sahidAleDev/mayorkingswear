@@ -19,7 +19,7 @@ import imgGa12 from '../images/ga12.jpg'
 const Index = () => {
     return (
 
-        <>
+        <section className='body-home'>
             <div className='hero'>
                 <Navbar/>
                 <div className="content">
@@ -75,7 +75,7 @@ const Index = () => {
                     </div>
                 </div>
             </section>
-        </>
+        </section>
     )
 }
 
